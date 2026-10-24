@@ -1,4 +1,5 @@
-https://romanbobers-create.github.io/zakrivayuschiy-teg-f/
+https://github.com/romanbobers-create/zakrivayuschiy-teg-f
+
 # Закрывающий тег
 
 Учебный проект по вёрстке, выполненный в рамках курса «Фронтенд-разработчик» от Яндекс Практикума. 
@@ -23,3 +24,5 @@ https://romanbobers-create.github.io/zakrivayuschiy-teg-f/
 *   `scripts/` — скрипты.
 *   `styles/` — CSS-файлы (переменные, глобальные стили, анимации, основной файл стилей).
 *   `svg/` — спрайты.
+
+👉 **[Посмотреть опубликованный сайт (GitHub Pages)](https://romanbobers-create.github.io/zakrivayuschiy-teg-f/)**
