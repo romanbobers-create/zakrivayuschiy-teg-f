@@ -1,4 +1,4 @@
-https://github.com/romanbobers-create/zakrivayuschiy-teg-f.git
+https://romanbobers-create.github.io/zakrivayuschiy-teg-f/
 # Закрывающий тег
 
 Учебный проект по вёрстке, выполненный в рамках курса «Фронтенд-разработчик» от Яндекс Практикума. 
