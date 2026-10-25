@@ -50,6 +50,17 @@
   border: var(--border-main);
 }
 
+.header__logo {
+  font-size: clamp(3.063rem, 2.7109rem + 1.5023vw, 4.063rem);
+  font-weight: var(--font-weight-main, 400);
+  line-height: 1;
+}
+
+.header__title {
+  margin-block-start: 20px;
+  font-size: clamp(0.875rem, 0.6768rem + 0.8458vw, 1.438rem);
+}
+
 .header__logo,
 .header__title,
 .dialog__text {
@@ -62,17 +73,9 @@
   align-items: center;
   line-height: var(--line-height-button);
   color: var(--accent-text-color);
-}
-
-.header__logo {
-  font-size: clamp(3.063rem, 2.7109rem + 1.5023vw, 4.063rem);
-  font-weight: var(--font-weight-main, 400);
-  line-height: 1;
-}
-
-.header__title {
-  margin-block-start: 20px;
-  font-size: clamp(0.875rem, 0.6768rem + 0.8458vw, 1.438rem);
+  position: relative; 
+  mix-blend-mode: difference; 
+  z-index: 2; 
 }
 
 .card__section {
@@ -102,7 +105,6 @@
   inline-size: 100%;
   aspect-ratio: 1 / 1;
 }
-
 
 .card--grayscale .card__image {
   filter: grayscale(0.8);
@@ -224,12 +226,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row; 
-  margin-inline: auto; /* Надежное центрирование по горизонтали */
+  flex-direction: row;
+  margin-inline: auto;
   white-space: nowrap;
   padding: 15px 20px;
   gap: 8px;
-  block-size: 55px; 
+  block-size: 55px;
   margin-block-start: 52px;
   margin-block-end: 100px;
   border: var(--border-main);
@@ -271,21 +273,35 @@
 }
 
 .save-button__icon {
-  width: 21px;
-  height: 21px;
-}
-
-.button__text,
-.save-button__icon,
-.dialog__floppy {
+  display: inline-block;
+  inline-size: 21px;
+  block-size: 21px;
   position: relative;
   mix-blend-mode: difference;
   color: var(--accent-text-color);
   z-index: 2;
 }
 
+.save-button__icon svg {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
 .dialog__floppy {
-  width: 39px;
+  display: inline-block;
+  inline-size: 39px;
+  block-size: 39px;
+  position: relative;
+  mix-blend-mode: difference;
+  color: var(--accent-text-color);
+  z-index: 2;
+}
+
+.dialog__floppy svg {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 /* --- СОСТОЯНИЯ СЕРДЦА --- */
@@ -404,6 +420,8 @@ dialog::backdrop {
 @media (width <= 375px) {
   .save-button {
     flex-direction: column;
+    block-size: auto; 
+    padding: 12px 20px; 
   }
 
   .save-button__icon {
